@@ -1,0 +1,64 @@
+{
+  "name": "@doo-inc/utils",
+  "version": "1.0.0",
+  "description": "DOO TypeScript utility modules.",
+  "private": false,
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/doo-inc/doo-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doo-inc/doo-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doo-inc/doo-utils/issues"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/utils.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/utils.esm.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/utils.cjs.production.min.js",
+      "limit": "10 KB"
+    }
+  ],
+  "scripts": {
+    "start": "dts watch",
+    "build": "dts build",
+    "test": "dts test",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "link": "npm link",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "docs": "typedoc --theme default --out docs ./src"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "size-limit": "^11.1.6",
+    "dts-cli": "^2.0.5",
+    "tslib": "^2.7.0",
+    "typedoc": "^0.26.8",
+    "typescript": "^5.6.2"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
